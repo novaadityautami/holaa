@@ -2,7 +2,11 @@ name: Publish Docker image
 on: push:   branches: ['main']
 jobs:
  push_to_registry:
+<<<<<<< HEAD
     name: Push Docker image to Docker Hub   
+=======
+    name: Push Docker image to Dockxer Hub   
+>>>>>>> d371106 (coba CI/CD)
     runs-on: ubuntu-latest   
     steps:     
     - name: Check out the repo       
@@ -23,5 +27,9 @@ jobs:
     with:         context: .         
     push: true         
     tags: ${{ steps.meta.outputs.tags }}         
+<<<<<<< HEAD
     labels: ${{ steps.meta.outputs.labels }}
 
+=======
+    labels: ${{ steps.meta.outputs.labels }}
+>>>>>>> d371106 (coba CI/CD)
